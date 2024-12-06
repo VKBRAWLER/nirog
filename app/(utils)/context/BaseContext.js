@@ -14,6 +14,7 @@ export const BaseProvider = ({ children }) => {
 
   const router = useRouter();
 
+  let [loading, setLoading] = useState(true);
   let [authToken, setAuthToken] = useState(null);
   let [userInfo, setUserInfo] = useState(null);
 
@@ -32,6 +33,7 @@ export const BaseProvider = ({ children }) => {
     if (authToken) {
       getUserDetails();
     }
+    setLoading(false);
   }, []);
 
   let userLogout = () => {
@@ -64,6 +66,8 @@ export const BaseProvider = ({ children }) => {
   };
 
   return (
-    <BaseContext.Provider value={contextData}>{children}</BaseContext.Provider>
+    <BaseContext.Provider value={contextData}>
+      {!loading && children}
+    </BaseContext.Provider>
   );
 };
