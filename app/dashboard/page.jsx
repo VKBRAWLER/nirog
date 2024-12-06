@@ -42,7 +42,7 @@ const DashBoardPage = () => {
                 parseInt(userInfo?.date_of_birth?.split("-")[0])}{" "}
               years
             </p>
-            <p className="text-2xl">Male</p>
+            <p className="text-2xl">{userInfo?.gender}</p>
           </div>
           <div className="flex justify-evenly lg:items-end lg:gap-1">
             <button className="px-2 py-1 rounded-xl text-2xl bg-white border-4 text-blue-400 border-blue-400 w-[8.5rem] hover:text-white hover:bg-blue-400">
