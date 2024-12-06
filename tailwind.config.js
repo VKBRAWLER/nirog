@@ -7,9 +7,10 @@ module.exports = {
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+      fontFamily: {
+        'robo-med': ['Roboto-Medium'],
+        'robo-bold': ['Roboto-Bold'],
+        'robo-light': ['Roboto-Light'],
       },
     },
   },

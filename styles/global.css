@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --TH01: #40A2E3;
+}
+
+* {
+  font-family: Roboto-Light, sans-serif;
+}
+
+@font-face {
+  font-family: 'Roboto-Light';
+  src: url("../public/fonts/Roboto-Light.ttf");
+}
+
+@font-face {
+  font-family: 'Roboto-Medium';
+  src: url("../public/fonts/Roboto-Medium.ttf");
+}
+
+@font-face {
+  font-family: 'Roboto-Bold';
+  src: url("../public/fonts/Roboto-Bold.ttf");
+}

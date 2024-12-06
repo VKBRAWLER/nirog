@@ -2,9 +2,11 @@
 import BaseContext from "@app/(utils)/context/BaseContext";
 import { useContext } from "react";
 import Image from 'next/image';
+import { useRouter } from "next/navigation";
 
 export default function Login() {
   const { baseURL, setAuthToken } = useContext(BaseContext);
+  const router = useRouter();
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -19,8 +21,13 @@ export default function Login() {
         }),
       });
       let data = await response.json();
-      setAuthToken(data);
-      localStorage.setItem("accessToken", JSON.stringify(data));
+      if (data.status == 200) {
+        setAuthToken(data);
+        localStorage.setItem("accessToken", JSON.stringify(data));
+        router.push('/dashboard');
+        
+      }
+      else { alert(data.message) }
     } catch (error) {
       console.error("Error logging in:", error);
     }
