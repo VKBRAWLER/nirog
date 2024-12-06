@@ -43,6 +43,8 @@ const Register = () => {
       setAuthToken(data);
       localStorage.setItem("accessToken", JSON.stringify(data));
       router.push("/dashboard");
+    } else {
+      alert("Invalid credentials");
     }
   };
   return (
