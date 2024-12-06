@@ -13,7 +13,7 @@ const Register = () => {
     let phone = e.target.phonenumber.value;
     let password = e.target.password.value;
     let username = e.target.mail.value;
-    let response = await fetch(`${baseURL}/users/`, {
+    let response = await fetch(`${baseURL}/user/`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
