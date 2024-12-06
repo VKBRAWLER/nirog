@@ -1,4 +1,5 @@
 import "@styles/global.css";
+import { BaseProvider } from "./(utils)/context/BaseContext";
 // import Auth from "@components/Auth";
 export const metadata = {
   title: "Create Next App",
@@ -9,7 +10,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-          {children}
+        <BaseProvider>{children}</BaseProvider>
       </body>
     </html>
   );
