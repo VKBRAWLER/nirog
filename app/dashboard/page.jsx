@@ -1,5 +1,5 @@
+"use client"; 
 import TimeLine from '@components/TimeLine';
-"use client";
 import BaseContext from "@app/(utils)/context/BaseContext";
 import useAxios from "@app/(utils)/hooks/axios";
 import React, { useContext, useEffect } from "react";
