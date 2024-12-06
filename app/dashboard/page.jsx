@@ -1,8 +1,9 @@
+import TimeLine from '@components/TimeLine';
 import React from 'react'
 
 const DashBoardPage = () => {
   return (
-    <main className='flex flex-col gap-1 lg:p-10'>
+    <main className='flex flex-col gap-1 lg:p-10 mb-3'>
       <section className='relative'>
         <div className='w-full h-40 lg:h-72 bg-[var(--TH01)] relative lg:rounded-3xl'>
         <img className='absolute left-1/2 lg:left-28 lg:translate-x-0 lg:translate-y-[10rem] transform -translate-x-1/2 bottom-0 translate-y-1/2 w-52 lg:w-64 bg-white rounded-full p-2' src="/images/profile-user.png" alt="" />
@@ -22,7 +23,7 @@ const DashBoardPage = () => {
           </div>
         </div>
       </section>
-      <section className='bg-gray-300 h-screen rounded-t-2xl'></section>
+      <TimeLine />
     </main>
   )
 }
