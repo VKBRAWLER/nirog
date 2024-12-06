@@ -39,8 +39,11 @@ const Register = () => {
       }),
     });
     data = await response.json();
-    setAuthToken(data);
-    localStorage.setItem("accessToken", JSON.stringify(data));
+    if (data.access) {
+      setAuthToken(data);
+      localStorage.setItem("accessToken", JSON.stringify(data));
+      router.push("/dashboard");
+    }
   };
   return (
     <main>
