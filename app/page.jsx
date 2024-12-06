@@ -4,20 +4,26 @@ import { useState } from "react";
 export default function Home() {
   const [accessToken, setAccessToken] = useState(null);
   const handleClick = () => {
-    const fetchTokens = async () => {
+    async function fetchTokens() {
       try {
-        const response = await fetch('/api/auth/user', {
+        const response = await fetch('/api/auth', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
           },
         });
+    
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+    
         const data = await response.json();
-        setAccessToken(data.accessToken);
+        console.log('Tokens:', data);
+        return data;
       } catch (error) {
-        console.error('Failed to fetch tokens');
+        console.error('Failed to fetch tokens:', error);
       }
-    };
+    }
     fetchTokens();
   }
   return (
