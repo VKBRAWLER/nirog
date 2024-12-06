@@ -32,10 +32,11 @@ export default function Login() {
           <img src="/images/animation.gif" alt="Doctor" />
         </div>
         <div className='right min-h-screen flex justify-center items-center bg-gradient-to-r from-white to-[#8ec6f8] h-32 w-full'  >
-          <div className="flex flex-col w-full max-w-sm p-6shadow-lg rounded-lg right ">
+          <div className="flex flex-col w-full max-w-sm p-6 h-5/6 shadow-lg rounded-lg right ">
+            <div className='flex justify-center items-center mb-12 mt-0'><Image src="/images/nirog.png" alt="Logo" width={200} height={200} /></div>
+
             <div className="mb-6 flex-col justify-center items-center">
-              <div className='flex justify-center items-center'><Image src="/images/nirog.png" alt="Logo" width={100} height={100} /></div>
-              <h2 className="text-2xl font-semibold text-center">Create Account</h2>
+              <h2 className="text-3xl font-semibold text-center mb-8">Login</h2>
             </div>
             <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
               <input
