@@ -41,7 +41,7 @@ const useAxios = () => {
     } else {
       // Attempt token refresh if expired
       try {
-        const response = await axios.post(`${baseURL}/api/token/refresh/`, {
+        const response = await axios.post(`${baseURL}/auth/token/refresh/`, {
           refresh: authToken.refresh,
         });
         console.log("Token refreshed:", response.data);
