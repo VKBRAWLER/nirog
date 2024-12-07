@@ -29,11 +29,11 @@ const Header = () => {
     },
   ]
   return (
-    <header className='bg-blue-100 h-24 flex justify-between lg:px-5 items-center relative'>
-      <img className='h-full' src="/images/nirog.png" alt="" />
+    <header className='bg-transparent h-24 flex justify-between lg:px-5 items-center relative'>
+      <Link className="h-full" href={'/'}><img className='h-full' src="/images/nirog.png" alt="" /></Link>
       <nav className="flex gap-4 lg:gap-8 items-center">
-        <Link className="underline text-blue-900 lg:text-2xl" href={'/dashboard'}>DashBoard</Link>
-        <Link className="underline text-blue-900 lg:text-2xl" href={'/signOut'}>Sign Out</Link>
+        <Link className="hover:underline text-blue-900 lg:text-2xl" href={'/dashboard'}>DashBoard</Link>
+        <Link className="hover:underline text-blue-900 lg:text-2xl" href={'/signOut'}>Sign Out</Link>
         <IoMdNotifications className='text-4xl' onClick={()=>{setNotifications(!notifications);}}/>
       </nav>
       {notifications &&
