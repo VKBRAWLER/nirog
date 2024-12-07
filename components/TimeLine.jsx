@@ -24,7 +24,7 @@ const TimeLine = () => {
     }
   ]
   return (
-    <section className='bg-gray-300 rounded-t-2xl p-2 relative'>
+    <section className='bg-[#ECF6FC] rounded-t-2xl p-2 relative'>
       <div className='absolute bg-black left-6 lg:left-56 w-2 h-[95%] bottom-0'></div>
       <ul className='flex flex-col justify-evenly gap-16 lg:pl-[12.5rem]'>
         {timeline.map((item, index) => (
