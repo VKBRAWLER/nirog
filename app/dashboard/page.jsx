@@ -7,7 +7,7 @@ import DashBoard from '@components/DashBoard';
 
 const DashBoardPage = () => {
   const { userInfo, setUserInfo } = useContext(BaseContext);
-  const [options, setOptions] = useState(true); // true = timeline, false = dashboard
+  const [options, setOptions] = useState(false); // true = timeline, false = dashboard
   let api = useAxios();
   let getUserInfo = async () => {
     let response = await api.get("/user/");
@@ -57,7 +57,7 @@ const DashBoardPage = () => {
           </div>
         </div>
       </section>
-      {options ? <TimeLine /> : <DashBoard />}
+      {options ? <TimeLine /> : <DashBoard role={userInfo?.role?.user_type} />}
 
     </main>
   );

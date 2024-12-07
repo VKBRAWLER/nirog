@@ -3,20 +3,24 @@ import { useEffect, useState } from "react";
 import { MdOutlinePersonAddAlt1 } from "react-icons/md";
 import { FaIdCard } from "react-icons/fa";
 import { IoCloseSharp } from "react-icons/io5";
+import StaffDashBoard from "@components/StaffDashBoard";
 
-const DashBoard = () => {
+const DashBoard = (params) => {
   const [popUp, setPopUp] = useState(null);
+  // if (params.role === 'staff') { return <StaffDashBoard /> }
+  if (!params.role) { return <StaffDashBoard /> }
+  else {
   return (
     <section className='bg-gray-300 rounded-t-2xl p-2 h-96 flex justify-between'>
       <img className='h-96 hidden lg:block' src="/images/computer.svg" alt="" />
       <div className="flex flex-col gap-3 items-center justify-center w-full">
-      <button onClick={()=> { setPopUp("Staff"); }} className='bg-blue-500 w-40 lg:w-72 h-10 lg:h-16 rounded-2xl flex justify-between items-center'>< MdOutlinePersonAddAlt1 className="h-full w-6 lg:w-14 ml-1 lg:ml-3" /> <span className="bg-white w-32 lg:w-52 lg:text-2xl h-full px-3 py-2 lg:py-4 rounded-2xl">Add Staff</span></button>
       <button onClick={()=> { setPopUp("Patient"); }} className='bg-blue-500 w-40 lg:w-72 h-10 lg:h-16 rounded-2xl flex justify-between items-center'>< FaIdCard className="h-full w-6 lg:w-14 ml-1 lg:ml-3" /> <span className="bg-white w-32 lg:w-52 lg:text-2xl h-full px-3 py-2 lg:py-4 rounded-2xl">Assign Patient</span></button>
+      <button onClick={()=> { setPopUp("Staff"); }} className='bg-blue-500 w-40 lg:w-72 h-10 lg:h-16 rounded-2xl flex justify-between items-center'>< MdOutlinePersonAddAlt1 className="h-full w-6 lg:w-14 ml-1 lg:ml-3" /> <span className="bg-white w-32 lg:w-52 lg:text-2xl h-full px-3 py-2 lg:py-4 rounded-2xl">Add Staff</span></button>
       </div>
       {popUp === 'Staff' && <A_Staff exitBtn={()=> {setPopUp(null)}} />}
       {popUp === 'Patient' && <A_Patient exitBtn={()=> {setPopUp(null)}} />}
     </section>
-  )
+  )}
 };
 
 export default DashBoard;
