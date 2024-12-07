@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 import BaseContext from "../context/BaseContext";
 
 const useAxios = () => {
-  const { authToken, setUser, setAuthToken, baseURL } = useContext(BaseContext);
+  const { authToken, setAuthToken, baseURL } = useContext(BaseContext);
   const router = useRouter();
 
   useEffect(() => {
@@ -48,7 +48,6 @@ const useAxios = () => {
 
         // Update token and context state
         localStorage.setItem("accessToken", JSON.stringify(response.data));
-        setUser(jwtDecode(response.data.access));
         setAuthToken(response.data);
 
         // Set new token in headers
