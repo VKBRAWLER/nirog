@@ -11,15 +11,19 @@ const DashBoard = () => {
   const { userInfo } = useContext(BaseContext);
 
   const role = userInfo?.role;
-  if (!role) {return null; }
-  if (role.user_type !== "Admin") { return <StaffDashBoard />; }
+  if (!role) {
+    return null;
+  }
+  if (role.user_type !== "Admin") {
+    return <StaffDashBoard />;
+  }
   const [popUp, setPopUp] = useState(null);
   return (
     <section className="bg-gray-300 rounded-t-2xl p-2 h-96 flex justify-between">
       <img className="h-96 hidden lg:block" src="/images/computer.svg" alt="" />
       <div className="flex flex-col gap-3 items-center justify-center w-full">
         <button
-            onClick={() => {
+          onClick={() => {
             setPopUp("Staff");
           }}
           className="bg-blue-500 w-40 lg:w-72 h-10 lg:h-16 rounded-2xl flex justify-between items-center"
@@ -49,7 +53,7 @@ const DashBoard = () => {
         />
       )}
       {popUp === "Patient" && (
-<A_Patient
+        <A_Patient
           exitBtn={() => {
             setPopUp(null);
           }}
@@ -104,9 +108,7 @@ const A_Staff = ({ exitBtn }) => {
             className="p-2 rounded-md text-black"
           />
           <select name="ward" className="p-2 rounded-md text-black mt-2">
-            <option value={null}>
-              Select Ward
-            </option>
+            <option value={null}>Select Ward</option>
             {wards.map((ward, index) => (
               <option key={index} value={ward}>
                 {ward}
@@ -142,6 +144,7 @@ const A_Patient = ({ exitBtn }) => {
     if (response.status === 201) {
       exitBtn();
     }
+    console.log(response);
   };
   const [wards, setWards] = useState([]);
   const [staffs, setStaffs] = useState([]);
