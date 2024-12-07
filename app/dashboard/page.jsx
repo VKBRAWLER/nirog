@@ -4,6 +4,7 @@ import BaseContext from "@app/(utils)/context/BaseContext";
 import useAxios from "@app/(utils)/hooks/axios";
 import { useContext, useEffect, useState } from "react";
 import DashBoard from '@components/DashBoard';
+import DelayedComponentPage from '@components/popup';
 
 const DashBoardPage = () => {
   const { userInfo, setUserInfo } = useContext(BaseContext);
@@ -21,6 +22,7 @@ const DashBoardPage = () => {
   }, []);
   return (
     <main className="flex flex-col gap-1 lg:p-10">
+      <DelayedComponentPage />
       <section className="relative">
         <div className="w-full h-40 lg:h-72 bg-[var(--TH01)] relative lg:rounded-3xl">
           <img
