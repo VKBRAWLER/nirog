@@ -57,7 +57,7 @@ const DashBoardPage = () => {
           </div>
         </div>
       </section>
-      {options ? <TimeLine /> : <DashBoard role={userInfo?.role?.user_type} />}
+      {options ? <TimeLine /> : <DashBoard />}
 
     </main>
   );
