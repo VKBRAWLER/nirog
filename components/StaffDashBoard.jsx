@@ -34,7 +34,7 @@ const StaffDashBoard = () => {
   return (
     <section className="relative my-3 rounded-2xl bg-[var(--TH01)] flex flex-col gap-3 p-4">
       <h1 className="text-2xl font-bold mb-4">Patients</h1>
-      <div className="">
+      <div>
         {Patients.map((patient, index) => (
           <Link href={`/logs/${patient.patientID}`} key={index} className="w-full bg-white shadow-md rounded-lg p-4 mb-4 flex flex-col gap-2">
             <div className="flex justify-between">
