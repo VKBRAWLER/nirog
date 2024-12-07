@@ -10,9 +10,21 @@ const Register = () => {
     let name = e.target.fullName.value;
     let aadhar = e.target.aadharNumber.value;
     let email = e.target.mail.value;
+    let gender = e.target.gender.value;
+    let date = e.target.date.value;
     let phone = e.target.phonenumber.value;
     let password = e.target.password.value;
     let username = e.target.mail.value;
+    console.log({
+      username,
+      name,
+      aadhar,
+      email,
+      phone,
+      gender,
+      date,
+      password,
+    });
     let response = await fetch(`${baseURL}/user/`, {
       method: "POST",
       headers: {
@@ -24,6 +36,8 @@ const Register = () => {
         aadhar,
         email,
         phone,
+        gender,
+        date,
         password,
       }),
     });
@@ -58,7 +72,7 @@ const Register = () => {
             height="800"
           />
         </div>
-        <div className="right min-h-screen flex justify-center items-center bg-gradient-to-r from-white to-[#8ec6f8] lg:h-32 lg:w-1/2">
+        <div className="right min-h-screen w-full flex justify-center items-center bg-gradient-to-r from-white to-[#8ec6f8] lg:h-32 lg:w-1/2">
           <div className="flex flex-col w-full max-w-2xl p-6 shadow-lg rounded-lg right h-4/5">
             <div className="mb-6 flex-col justify-center items-center">
               <div className="flex justify-center items-center">
@@ -102,6 +116,15 @@ const Register = () => {
                 placeholder="Phone Number"
                 className="text-2xl [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none p-3 pl-0 pb-0 border-gray-500 bg-transparent border-b focus:outline-none  border-t-0 border-l-0 border-r-0"
               />
+              <div className="flex space-x-4">
+                <select name="gender" id="gender"
+                className="inline-block w-1/2 text-2xl [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none p-3 pl-0 pb-0 border-gray-500 bg-transparent border-b focus:outline-none  border-t-0 border-l-0 border-r-0"  >
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Others">Others</option>
+                </select>
+                <input type="date" name="date" id="date" className="inline-block w-1/2 text-2xl [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none p-3 pl-0 pb-0 border-gray-500 bg-transparent border-b focus:outline-none  border-t-0 border-l-0 border-r-0" />
+              </div>
               <input
                 type="password"
                 name="password"

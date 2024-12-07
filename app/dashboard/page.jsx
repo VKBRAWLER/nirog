@@ -2,7 +2,7 @@
 import TimeLine from '@components/TimeLine';
 import BaseContext from "@app/(utils)/context/BaseContext";
 import useAxios from "@app/(utils)/hooks/axios";
-import React, { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import DashBoard from '@components/DashBoard';
 
 const DashBoardPage = () => {
