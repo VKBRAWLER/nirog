@@ -9,7 +9,7 @@ import { useState } from "react";
 const Header = () => {
   const pathname = usePathname().toLowerCase();
   if (pathname.includes("auth")) return null;
-  const [notifications, setNotifications] = useState(true);
+  const [notifications, setNotifications] = useState(false);
   const notificationList = [
     {
       title: "New Connection",

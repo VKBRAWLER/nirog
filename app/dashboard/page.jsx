@@ -8,7 +8,7 @@ import DelayedComponentPage from '@components/popup';
 
 const DashBoardPage = () => {
   const { userInfo, setUserInfo } = useContext(BaseContext);
-  const [options, setOptions] = useState(false); // true = timeline, false = dashboard
+  const [options, setOptions] = useState(true); // true = timeline, false = dashboard
   let api = useAxios();
   let getUserInfo = async () => {
     let response = await api.get("/user/");
@@ -53,9 +53,10 @@ const DashBoardPage = () => {
             <button onClick={()=> { setOptions(true); }} className={`px-2 py-1 rounded-xl text-2xl border-4 border-blue-400 w-[8.5rem] hover:text-white hover:bg-blue-400 ${options ? 'text-white bg-blue-400' : 'text-blue-400 bg-white' } `}>
               TimeLine
             </button>
+            {userInfo?.role &&
             <button onClick={()=> { setOptions(false); }} className={`px-2 py-1 rounded-xl text-2xl border-4 border-blue-400 w-[8.5rem] hover:text-white hover:bg-blue-400 ${!options ? 'text-white bg-blue-400' : 'text-blue-400 bg-white' } `}>
-              DashBoard
-            </button>
+            DashBoard
+          </button>}
           </div>
         </div>
       </section>
