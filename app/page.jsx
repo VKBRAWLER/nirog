@@ -31,15 +31,16 @@ export default function Home() {
       <section class="text-gray-600 body-font">
         <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
           <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-            <h1 class="title-font  sm:text-7xl text-7xl mb-4 font-black text-gray-900">Innovating Healthcare, Transforming Lives</h1>
-            <p class="mb-8 leading-relaxed">Copper mug try-hard pitchfork pour-over freegan heirloom neutra air plant cold-pressed tacos poke beard tote bag. Heirloom echo park mlkshk tote bag selvage hot chicken authentic tumeric truffaut hexagon try-hard chambray.</p>
+            <h1 class="title-font  sm:text-7xl text-10xl mb-4 font-black text-gray-900">Innovating Healthcare, Transforming Lives</h1>
+            <p class="mb-8 leading-relaxed w-1/2">Empowering healthcare with intelligent solutions. Streamline diagnoses, enhance patient care, and redefine medical innovation.
+</p>
             <div class="flex justify-center">
-              <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
-              <button class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Button</button>
+              <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Login</button>
+              <button class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Sign up</button>
             </div>
           </div>
           <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-            <img class="object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720x600"/>
+            <img class="object-cover object-center rounded" alt="hero" src="/images/Doctor.gif"/>
           </div>
         </div>
         <section class="text-gray-600 body-font">
@@ -56,39 +57,26 @@ export default function Home() {
             <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
               <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
                 <div class="rounded-lg h-64 overflow-hidden">
-                  <img alt="content" class="object-cover object-center h-full w-full" src="https://dummyimage.com/1203x503"/>
+                  <img alt="content" class="object-cover object-center h-full w-full" src="/images/twentyFourSeven.gif"/>
                 </div>
-                <h2 class="text-xl font-medium title-font text-gray-900 mt-5">Shooting Stars</h2>
-                <p class="text-base leading-relaxed mt-2">Swag shoivdigoitch literally meditation subway tile tumblr cold-pressed. Gastropub street art beard dreamcatcher neutra, ethical XOXO lumbersexual.</p>
-                <a class="text-indigo-500 inline-flex items-center mt-3">Learn More
-                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-                    <path d="M5 12h14M12 5l7 7-7 7"></path>
-                  </svg>
-                </a>
+                <h2 class="text-xl font-bold title-font text-gray-900 mt-5">24/7 Services</h2>
+                <p class="text-base leading-relaxed mt-2">Our web app offers 24/7 emergency care.</p>
+                
               </div>
               <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
                 <div class="rounded-lg h-64 overflow-hidden">
-                  <img alt="content" class="object-cover object-center h-full w-full" src="https://dummyimage.com/1204x504"/>
+                  <img alt="content" class="object-fit object-center h-full w-full" src="/images/safety.gif"/>
                 </div>
-                <h2 class="text-xl font-medium title-font text-gray-900 mt-5">The Catalyzer</h2>
-                <p class="text-base leading-relaxed mt-2">Swag shoivdigoitch literally meditation subway tile tumblr cold-pressed. Gastropub street art beard dreamcatcher neutra, ethical XOXO lumbersexual.</p>
-                <a class="text-indigo-500 inline-flex items-center mt-3">Learn More
-                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-                    <path d="M5 12h14M12 5l7 7-7 7"></path>
-                  </svg>
-                </a>
+                <h2 class="text-xl font-medium title-font text-gray-900 mt-5">Patient Safety</h2>
+                <p class="text-base leading-relaxed mt-2">Our web app prioritizes patient safety with secure data handling, reliable healthcare guidance, and 24/7 access to certified medical professionals.</p>
+                
               </div>
               <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
                 <div class="rounded-lg h-64 overflow-hidden">
-                  <img alt="content" class="object-cover object-center h-full w-full" src="https://dummyimage.com/1205x505"/>
+                  <img alt="content" class="object-cover  object-center h-full w-full" src="/images/emergency.svg"/>
                 </div>
-                <h2 class="text-xl font-medium title-font text-gray-900 mt-5">The 400 Blows</h2>
-                <p class="text-base leading-relaxed mt-2">Swag shoivdigoitch literally meditation subway tile tumblr cold-pressed. Gastropub street art beard dreamcatcher neutra, ethical XOXO lumbersexual.</p>
-                <a class="text-indigo-500 inline-flex items-center mt-3">Learn More
-                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-                    <path d="M5 12h14M12 5l7 7-7 7"></path>
-                  </svg>
-                </a>
+                <h2 class="text-xl font-medium title-font text-gray-900 mt-5">Emergency Care.</h2>
+                <p class="text-base leading-relaxed mt-2">Our web app ensures prompt emergency care with 24/7 medical assistance, instant doctor consultations, and guidance for urgent health situations such as immediately providing with blood.</p>
               </div>
             </div>
           </div>
